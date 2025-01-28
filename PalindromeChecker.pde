@@ -16,8 +16,14 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
+  String wordlow = noCapitals(word);
+  String wordxspace = noSpaces(wordlow);
+  if(wordxspace.equals(reverse(wordxspace))){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 public String reverse(String str)
 {
